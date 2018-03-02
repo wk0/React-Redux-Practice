@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ReduxSimpleStarter
 
 Interested in learning [Redux](https://www.udemy.com/react-redux/)?
@@ -23,3 +24,7 @@ Click [here](https://github.com/StephenGrider/ReactStarter/releases) then downlo
 > npm install
 > npm start
 ```
+=======
+# React-Redux-Youtube-Clone
+Coding along to https://udemy.com/react-redux
+>>>>>>> refs/remotes/origin/master
