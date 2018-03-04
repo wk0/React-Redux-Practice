@@ -1,5 +1,14 @@
 import React, { Component } from 'react';
 
+const styles = {
+    searchBar : {
+        'margin': '20px',
+        'textAlign': 'center',
+    },
+    searchBarInput : {
+        'width':'75%'
+    }
+}
 
 class SearchBar extends Component {
     constructor(props){
@@ -8,14 +17,20 @@ class SearchBar extends Component {
         this.state = { term: 'Starting Value' };
     }
     
+    onInputChange(term) {
+        this.setState({term});
+        this.props.onSearchTermChange(term);
+    }
+
     render() {
         return (
-            <div>
-                <input value={this.state.term}
-                onChange={event => this.setState({term: event.target.value})} />
+            <div style={styles.searchBar}>
+                <input style={styles.searchBarInput} value={this.state.term}
+                onChange={event => this.onInputChange(event.target.value)} />
             </div>
         );
     }
+
 }
 
 export default SearchBar;
